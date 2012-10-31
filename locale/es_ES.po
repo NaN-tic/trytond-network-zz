@@ -1,0 +1,435 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:network.network:"
+msgid "You must set at least the domain or IP address."
+msgstr "Debe configurar por lo menos el dominio o la dirección IP."
+
+msgctxt "field:network.hardware,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:network.hardware,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:network.hardware,id:"
+msgid "ID"
+msgstr "Id"
+
+msgctxt "field:network.hardware,name:"
+msgid "Device Name"
+msgstr "Nombre del dispositivo"
+
+msgctxt "field:network.hardware,network:"
+msgid "Network"
+msgstr "Red"
+
+msgctxt "field:network.hardware,note:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:network.hardware,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:network.hardware,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:network.hardware,softwares:"
+msgid "Softwares"
+msgstr "Programas"
+
+msgctxt "field:network.hardware,type:"
+msgid "Hardware type"
+msgstr "Tipo de hardware"
+
+msgctxt "field:network.hardware,write_date:"
+msgid "Write Date"
+msgstr "Fecha de escritura"
+
+msgctxt "field:network.hardware,write_uid:"
+msgid "Write User"
+msgstr "Usuario de escritura"
+
+msgctxt "field:network.hardware.type,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:network.hardware.type,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:network.hardware.type,id:"
+msgid "ID"
+msgstr "Id"
+
+msgctxt "field:network.hardware.type,name:"
+msgid "Type of hardware"
+msgstr "Tipo de hardware"
+
+msgctxt "field:network.hardware.type,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:network.hardware.type,write_date:"
+msgid "Write Date"
+msgstr "Fecha de escritura"
+
+msgctxt "field:network.hardware.type,write_uid:"
+msgid "Write User"
+msgstr "Usuario de escritura"
+
+msgctxt "field:network.network,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:network.network,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:network.network,domain:"
+msgid "Domain"
+msgstr "Dominio"
+
+msgctxt "field:network.network,hardwares:"
+msgid "Hardwares"
+msgstr "Hardwares"
+
+msgctxt "field:network.network,id:"
+msgid "ID"
+msgstr "Id"
+
+msgctxt "field:network.network,ip_address:"
+msgid "IP Address"
+msgstr "Dirección IP"
+
+msgctxt "field:network.network,name:"
+msgid "Network name"
+msgstr "Nombre de red"
+
+msgctxt "field:network.network,note:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:network.network,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:network.network,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:network.network,write_date:"
+msgid "Write Date"
+msgstr "Fecha de escritura"
+
+msgctxt "field:network.network,write_uid:"
+msgid "Write User"
+msgstr "Usuario de escritura"
+
+msgctxt "field:network.protocol,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:network.protocol,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:network.protocol,id:"
+msgid "ID"
+msgstr "Id"
+
+msgctxt "field:network.protocol,name:"
+msgid "Protocol Name"
+msgstr "Nombre de protocolo"
+
+msgctxt "field:network.protocol,port:"
+msgid "Port"
+msgstr "Puerto"
+
+msgctxt "field:network.protocol,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:network.protocol,software_login:"
+msgid "Software Login"
+msgstr "Registro de programa"
+
+msgctxt "field:network.protocol,write_date:"
+msgid "Write Date"
+msgstr "Fecha de escritura"
+
+msgctxt "field:network.protocol,write_uid:"
+msgid "Write User"
+msgstr "Usuario de escritura"
+
+msgctxt "field:network.software,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:network.software,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:network.software,hardware:"
+msgid "Hardware"
+msgstr "Hardware"
+
+msgctxt "field:network.software,id:"
+msgid "ID"
+msgstr "Id"
+
+msgctxt "field:network.software,logins:"
+msgid "Login Users"
+msgstr "Usuarios registrados"
+
+msgctxt "field:network.software,name:"
+msgid "Software name"
+msgstr "Nombre de programa"
+
+msgctxt "field:network.software,network:"
+msgid "Network"
+msgstr "Red"
+
+msgctxt "field:network.software,note:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:network.software,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:network.software,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:network.software,type:"
+msgid "Software Type"
+msgstr "Tipo de programa"
+
+msgctxt "field:network.software,write_date:"
+msgid "Write Date"
+msgstr "Fecha de escritura"
+
+msgctxt "field:network.software,write_uid:"
+msgid "Write User"
+msgstr "Usuario de escritura"
+
+msgctxt "field:network.software.login,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:network.software.login,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:network.software.login,hardware:"
+msgid "Hardware"
+msgstr "Hardware"
+
+msgctxt "field:network.software.login,id:"
+msgid "ID"
+msgstr "Id"
+
+msgctxt "field:network.software.login,login:"
+msgid "Login"
+msgstr "Registro"
+
+msgctxt "field:network.software.login,note:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:network.software.login,password:"
+msgid "Password"
+msgstr "Contraseña"
+
+msgctxt "field:network.software.login,protocols:"
+msgid "Connection Protocols"
+msgstr "Protocolo de conexión"
+
+msgctxt "field:network.software.login,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:network.software.login,software:"
+msgid "Software"
+msgstr "Programa"
+
+msgctxt "field:network.software.login,superuser:"
+msgid "Super User"
+msgstr "Super usuario"
+
+msgctxt "field:network.software.login,write_date:"
+msgid "Write Date"
+msgstr "Fecha de escritura"
+
+msgctxt "field:network.software.login,write_uid:"
+msgid "Write User"
+msgstr "Usuario de escritura"
+
+msgctxt "field:network.software.type,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:network.software.type,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:network.software.type,id:"
+msgid "ID"
+msgstr "Id"
+
+msgctxt "field:network.software.type,name:"
+msgid "Software Type Name"
+msgstr "Tipo de programa"
+
+msgctxt "field:network.software.type,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:network.software.type,write_date:"
+msgid "Write Date"
+msgstr "Fecha de escritura"
+
+msgctxt "field:network.software.type,write_uid:"
+msgid "Write User"
+msgstr "Usuario de escritura"
+
+msgctxt "model:ir.action,name:act_network_hardware"
+msgid "Hardware"
+msgstr "Hardware"
+
+msgctxt "model:ir.action,name:act_network_network"
+msgid "Network"
+msgstr "Red"
+
+msgctxt "model:ir.action,name:act_network_software"
+msgid "Software"
+msgstr "Programa"
+
+msgctxt "model:ir.ui.menu,name:menu_network"
+msgid "Network"
+msgstr "Red"
+
+msgctxt "model:ir.ui.menu,name:menu_network_hardware"
+msgid "Hardware"
+msgstr "Hardware"
+
+msgctxt "model:ir.ui.menu,name:menu_network_network"
+msgid "Network"
+msgstr "Red"
+
+msgctxt "model:ir.ui.menu,name:menu_network_software"
+msgid "Software"
+msgstr "Programa"
+
+msgctxt "model:network.hardware,name:"
+msgid "Network Hardware"
+msgstr "Hardware de red"
+
+msgctxt "model:network.hardware.type,name:"
+msgid "Network"
+msgstr "Red"
+
+msgctxt "model:network.network,name:"
+msgid "Network"
+msgstr "Red"
+
+msgctxt "model:network.protocol,name:"
+msgid "Network Protocol"
+msgstr "Protocolo de red"
+
+msgctxt "model:network.software,name:"
+msgid "Network Software"
+msgstr "Programas de red"
+
+msgctxt "model:network.software.login,name:"
+msgid "Network Software Login"
+msgstr "Registro de programa de red"
+
+msgctxt "model:network.software.type,name:"
+msgid "Network Software Type"
+msgstr "Tipo de programa de red"
+
+msgctxt "model:res.group,name:group_network"
+msgid "Network"
+msgstr "Red"
+
+msgctxt "view:network.hardware.type:"
+msgid "Hardware Type"
+msgstr "Tipo de hardware"
+
+msgctxt "view:network.hardware:"
+msgid "Hardware"
+msgstr "Hardware"
+
+msgctxt "view:network.hardware:"
+msgid "Hardwares"
+msgstr "Hardwares"
+
+msgctxt "view:network.hardware:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "view:network.hardware:"
+msgid "Softwares"
+msgstr "Programas"
+
+msgctxt "view:network.network:"
+msgid "Hardwares"
+msgstr "Hardwares"
+
+msgctxt "view:network.network:"
+msgid "Network"
+msgstr "Red"
+
+msgctxt "view:network.network:"
+msgid "Networks"
+msgstr "Redes"
+
+msgctxt "view:network.network:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "view:network.protocol:"
+msgid "Protocol"
+msgstr "Protocolo"
+
+msgctxt "view:network.protocol:"
+msgid "Protocols"
+msgstr "Protocolos"
+
+msgctxt "view:network.software.login:"
+msgid "Connection Protocols"
+msgstr "Protocolo de conexión"
+
+msgctxt "view:network.software.login:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "view:network.software.login:"
+msgid "Software Type"
+msgstr "Tipo de programa"
+
+msgctxt "view:network.software.type:"
+msgid "Software Type"
+msgstr "Tipo de programa"
+
+msgctxt "view:network.software:"
+msgid "Login Users"
+msgstr "Usuarios registrados"
+
+msgctxt "view:network.software:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "view:network.software:"
+msgid "Software"
+msgstr "Programa"
+
+msgctxt "view:network.software:"
+msgid "Softwares"
+msgstr "Programas"

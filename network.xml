@@ -1,0 +1,426 @@
+<?xml version="1.0"?>
+<!-- This file is part of network module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<tryton>
+    <data>
+    <!-- Groups -->
+    <record model="res.group" id="group_network">
+        <field name="name">Network</field>
+    </record>
+
+    <!-- Icon -->
+    <record model="ir.ui.icon" id="network_icon">
+        <field name="name">tryton-network</field>
+        <field name="path">icons/tryton-network.svg</field>
+    </record>
+
+    <!-- Top Menu -->
+    <menuitem name="Network" id="menu_network" icon="tryton-network"/>
+
+    <!-- network.network -->
+    <record model="ir.ui.view" id="network_network_view_tree">
+        <field name="model">network.network</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+                <tree string="Networks">
+                    <field name='name'/>
+                    <field name='party'/>
+                    <field name='domain'/>
+                    <field name='ip_address'/>
+                </tree>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="network_network_view_form">
+        <field name="model">network.network</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="Network" col="4">
+                <label name='name'/>
+                <field name='name'/>
+                <label name='party'/>
+                <field name='party'/>
+                <label name='domain'/>
+                <field name='domain'/>
+                <label name='ip_address'/>
+                <field name='ip_address'/>
+                <notebook colspan="4">
+                    <page string="Hardwares" id="hardwares">
+                        <field name='hardwares'/>
+                    </page>
+                    <page string="Notes" id="note">
+                        <field name='note'/>
+                    </page>
+                </notebook>
+            </form>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_network_network">
+        <field name="name">Network</field>
+        <field name="res_model">network.network</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_network_network_tree">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="network_network_view_tree"/>
+        <field name="act_window" ref="act_network_network"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_network_network_form">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="network_network_view_form"/>
+        <field name="act_window" ref="act_network_network"/>
+    </record>
+
+    <menuitem name="Network"
+        parent="menu_network"
+        action="act_network_network"
+        id="menu_network_network"/>
+
+    <record model="ir.model.access" id="access_network_network">
+        <field name="model" search="[('model', '=', 'network.network')]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_delete" eval="False"/>
+    </record>
+
+    <record model="ir.model.access" id="access_network_network_admin">
+        <field name="model" search="[('model', '=', 'network.network')]"/>
+        <field name="group" ref="group_network"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_delete" eval="True"/>
+    </record>
+
+    <!-- network.hardware.type -->
+    <record model="ir.ui.view" id="network_hardware_type_view_form">
+        <field name="model">network.hardware.type</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="Hardware Type" col="4">
+                <label name='name'/>
+                <field name='name'/>
+            </form>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.model.access" id="access_network_hardware_type">
+        <field name="model" search="[('model', '=', 'network.hardware.type')]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_delete" eval="False"/>
+    </record>
+
+    <record model="ir.model.access" id="access_network_hardware_type_admin">
+        <field name="model" search="[('model', '=', 'network.hardware.type')]"/>
+        <field name="group" ref="group_network"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_delete" eval="True"/>
+    </record>
+
+    <!-- network.hardware -->
+    <record model="ir.ui.view" id="network_hardware_view_tree">
+        <field name="model">network.hardware</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <tree string="Hardwares">
+                <field name='name'/>
+                <field name='type'/>
+                <field name='party'/>
+                <field name='network'/>
+            </tree>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="network_hardware_view_form">
+        <field name="model">network.hardware</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="Hardware" col="4">
+                <label name='name'/>
+                <field name='name'/>
+                <label name='type'/>
+                <field name='type'/>
+                <label name='party'/>
+                <field name='party'/>
+                <label name='network'/>
+                <field name='network'/>
+                <notebook colspan="4">
+                    <page string="Softwares" id="softwares">
+                        <field name='softwares'/>
+                    </page>
+                    <page string="Notes" id="note">
+                        <field name='note'/>
+                    </page>
+                </notebook>
+            </form>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_network_hardware">
+        <field name="name">Hardware</field>
+        <field name="res_model">network.hardware</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_network_hardware_tree">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="network_hardware_view_tree"/>
+        <field name="act_window" ref="act_network_hardware"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_network_hardware_form">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="network_hardware_view_form"/>
+        <field name="act_window" ref="act_network_hardware"/>
+    </record>
+
+    <menuitem name="Hardware"
+        parent="menu_network"
+        action="act_network_hardware"
+        id="menu_network_hardware"/>
+
+    <record model="ir.model.access" id="access_network_hardware">
+        <field name="model" search="[('model', '=', 'network.hardware')]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_delete" eval="False"/>
+    </record>
+
+    <record model="ir.model.access" id="access_network_hardware_admin">
+        <field name="model" search="[('model', '=', 'network.hardware')]"/>
+        <field name="group" ref="group_network"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_delete" eval="True"/>
+    </record>
+
+    <!-- network.software.type -->
+    <record model="ir.ui.view" id="network_software_type_view_form">
+        <field name="model">network.software.type</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="Software Type" col="4">
+                <label name='name'/>
+                <field name='name'/>
+            </form>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.model.access" id="access_network_software_type">
+        <field name="model" search="[('model', '=', 'network.software.type')]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_delete" eval="False"/>
+    </record>
+
+    <record model="ir.model.access" id="access_network_software_type_admin">
+        <field name="model" search="[('model', '=', 'network.software.type')]"/>
+        <field name="group" ref="group_network"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_delete" eval="True"/>
+    </record>
+
+    <!-- network.software -->
+    <record model="ir.ui.view" id="network_software_view_tree">
+        <field name="model">network.software</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <tree string="Softwares">
+                <field name='name'/>
+                <field name='type'/>
+                <field name='party'/>
+                <field name='network'/>
+                <field name='hardware'/>
+            </tree>
+            ]]>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="network_software_view_form">
+        <field name="model">network.software</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="Software" col="6">
+                <label name='name'/>
+                <field name='name'/>
+                <label name='type'/>
+                <field name='type'/>
+                <label name='party'/>
+                <field name='party'/>
+                <label name='network'/>
+                <field name='network'/>
+                <label name='hardware'/>
+                <field name='hardware'/>
+                <notebook colspan="6">
+                    <page string="Login Users" id="logins">
+                        <field name='logins' colspan="6"/>
+                    </page>
+                    <page string="Notes" id="note">
+                        <field name='note' colspan="6"/>
+                    </page>
+                </notebook>
+            </form>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.action.act_window" id="act_network_software">
+        <field name="name">Software</field>
+        <field name="res_model">network.software</field>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_network_software_tree">
+        <field name="sequence" eval="10"/>
+        <field name="view" ref="network_software_view_tree"/>
+        <field name="act_window" ref="act_network_software"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_network_software_form">
+        <field name="sequence" eval="20"/>
+        <field name="view" ref="network_software_view_form"/>
+        <field name="act_window" ref="act_network_software"/>
+    </record>
+
+    <menuitem name="Software"
+        parent="menu_network"
+        action="act_network_software"
+        id="menu_network_software"/>
+
+    <record model="ir.model.access" id="access_network_software">
+        <field name="model" search="[('model', '=', 'network.software')]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_delete" eval="False"/>
+    </record>
+
+    <record model="ir.model.access" id="access_network_software_admin">
+        <field name="model" search="[('model', '=', 'network.software')]"/>
+        <field name="group" ref="group_network"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_delete" eval="True"/>
+    </record>
+
+    <!-- network.software.login -->
+    <record model="ir.ui.view" id="network_software_login_view_form">
+        <field name="model">network.software.login</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="Software Type" col="6">
+                <label name='login'/>
+                <field name='login'/>
+                <label name='password'/>
+                <field name='password'/>
+                <label name='superuser'/>
+                <field name='superuser'/>
+                <label name='hardware'/>
+                <field name='hardware'/>
+                <label name='software'/>
+                <field name='software'/>
+                <notebook colspan="6">
+                    <page string="Connection Protocols" id="protocols">
+                        <field name="protocols" colspan="6"/>
+                    </page>
+                    <page string="Notes" id="note">
+                        <field name="note" colspan="6"/>
+                    </page>
+                </notebook>
+            </form>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.model.access" id="access_network_software_login">
+        <field name="model" search="[('model', '=', 'network.software.login')]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_delete" eval="False"/>
+    </record>
+
+    <record model="ir.model.access" id="access_network_software_login_admin">
+        <field name="model" search="[('model', '=', 'network.software.login')]"/>
+        <field name="group" ref="group_network"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_delete" eval="True"/>
+    </record>
+
+    <!-- network.protocol -->
+    <record model="ir.ui.view" id="network_protocol_view_tree">
+        <field name="model">network.protocol</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <tree string="Protocols">
+                <field name='name'/>
+                <field name='port'/>
+            </tree>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="network_protocol_view_form">
+        <field name="model">network.protocol</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="Protocol" col="6">
+                <label name='name'/>
+                <field name='name'/>
+                <label name='port'/>
+                <field name='port'/>
+            </form>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.model.access" id="access_network_protocol">
+        <field name="model" search="[('model', '=', 'network.protocol')]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_delete" eval="False"/>
+    </record>
+
+    <record model="ir.model.access" id="access_network_protocol_admin">
+        <field name="model" search="[('model', '=', 'network.protocol')]"/>
+        <field name="group" ref="group_network"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_delete" eval="True"/>
+    </record>
+
+    </data>
+</tryton>
