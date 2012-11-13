@@ -26,20 +26,20 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
         (major_version, minor_version, major_version, minor_version + 1))
 
-setup(name='trytond_network',
+setup(name='trytonzz_network',
     version=info.get('version', '0.0.1'),
     description='Tryton module for network management',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytond-network",
-    package_dir={'trytond.modules.network': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytonzz-network",
+    package_dir={'trytonzz.modules.network': '.'},
     packages=[
-        'trytond.modules.network',
-        'trytond.modules.network.tests',
+        'trytonzz.modules.network',
+        'trytonzz.modules.network.tests',
     ],
     package_data={
-        'trytond.modules.network': info.get('xml', []) \
+        'trytonzz.modules.network': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po', 'icons/*.svg'],
     },
     classifiers=[
@@ -62,9 +62,9 @@ setup(name='trytond_network',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytond.modules]
-    network= trytond.modules.network
+    [trytonzz.modules]
+    network= trytonzz.modules.network
     """,
     test_suite='tests',
-    test_loader='trytond.test_loader:Loader',
+    test_loader='trytonzz.test_loader:Loader',
 )
