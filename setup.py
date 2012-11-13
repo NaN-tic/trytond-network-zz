@@ -36,7 +36,7 @@ setup(name='trytond_network',
     package_dir={'trytond.modules.network': '.'},
     packages=[
         'trytond.modules.network',
-        'trytond.modules.network_tests',
+        'trytond.modules.network.tests',
     ],
     package_data={
         'trytond.modules.network': info.get('xml', []) \
