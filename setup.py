@@ -32,14 +32,14 @@ setup(name='trytonzz_network',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytonzz-network",
-    package_dir={'trytonzz.modules.network': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytond-network",
+    package_dir={'trytond.modules.network': '.'},
     packages=[
-        'trytonzz.modules.network',
-        'trytonzz.modules.network.tests',
+        'trytond.modules.network',
+        'trytond.modules.network.tests',
     ],
     package_data={
-        'trytonzz.modules.network': info.get('xml', []) \
+        'trytond.modules.network': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po', 'icons/*.svg'],
     },
     classifiers=[
@@ -62,9 +62,9 @@ setup(name='trytonzz_network',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytonzz.modules]
-    network= trytonzz.modules.network
+    [trytond.modules]
+    network= trytond.modules.network
     """,
     test_suite='tests',
-    test_loader='trytonzz.test_loader:Loader',
+    test_loader='trytond.test_loader:Loader',
 )
