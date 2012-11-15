@@ -8,6 +8,10 @@ copyright notices and license terms. -->
     <record model="res.group" id="group_network">
         <field name="name">Network</field>
     </record>
+    <record model="res.user-res.group" id="user_admin_group_network">
+        <field name="user" ref="res.user_admin"/>
+        <field name="group" ref="group_network"/>
+    </record>
 
     <!-- Icon -->
     <record model="ir.ui.icon" id="network_icon">
@@ -375,6 +379,102 @@ copyright notices and license terms. -->
         <field name="perm_create" eval="True"/>
         <field name="perm_delete" eval="True"/>
     </record>
+
+    <!-- network.protocol.type -->
+    <record model="ir.ui.view" id="network_protocol_type_view_tree">
+        <field name="model">network.protocol.type</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <tree string="Protocols">
+                <field name='name'/>
+            </tree>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="network_protocol_type_view_form">
+        <field name="model">network.protocol.type</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <![CDATA[
+            <form string="Protocol" col="6">
+                <label name='name'/>
+                <field name='name'/>
+            </form>
+            ]]> 
+        </field>
+    </record>
+
+    <record model="ir.model.access" id="access_network_protocol_type">
+        <field name="model" search="[('model', '=', 'network.protocol.type')]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_delete" eval="False"/>
+    </record>
+
+    <record model="ir.model.access" id="access_network_protocol_admin_type">
+        <field name="model" search="[('model', '=', 'network.protocol.type')]"/>
+        <field name="group" ref="group_network"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_delete" eval="True"/>
+    </record>
+
+    <record model="network.protocol.type" id="ftp_protocol_type">
+      <field name="name">FTP</field>
+    </record>
+
+    <record model="network.protocol.type" id="http_protocol_type">
+      <field name="name">HTTP</field>
+    </record>
+
+    <record model="network.protocol.type" id="https_protocol_type">
+      <field name="name">HTTPS</field>
+    </record>
+
+    <record model="network.protocol.type" id="net_rpc_protocol_type">
+      <field name="name">NET-RPC</field>
+    </record>
+
+    <record model="network.protocol.type" id="pop_protocol_type">
+      <field name="name">POP</field>
+    </record>
+
+    <record model="network.protocol.type" id="rtps_protocol_type">
+      <field name="name">RTPS</field>
+    </record>
+
+    <record model="network.protocol.type" id="smtp_protocol_type">
+      <field name="name">SMTP</field>
+    </record>
+
+    <record model="network.protocol.type" id="ssh_protocol_type">
+      <field name="name">SSH</field>
+    </record>
+
+    <record model="network.protocol.type" id="ssl_protocol_type">
+      <field name="name">SSL</field>
+    </record>
+
+    <record model="network.protocol.type" id="tls_protocol_type">
+      <field name="name">TLS</field>
+    </record>
+
+    <record model="network.protocol.type" id="xml_rpc_protocol_type">
+      <field name="name">XML-RPC</field>
+    </record>
+
+    <record model="network.protocol.type" id="xml_rpcs_protocol_type">
+      <field name="name">XML-RPCS</field>
+    </record>
+
+    <record model="network.protocol.type" id="json_protocol_type">
+      <field name="name">JSON</field>
+    </record>
+
 
     <!-- network.protocol -->
     <record model="ir.ui.view" id="network_protocol_view_tree">

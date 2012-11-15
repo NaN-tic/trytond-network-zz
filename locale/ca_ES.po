@@ -235,8 +235,8 @@ msgid "ID"
 msgstr "Id"
 
 msgctxt "field:network.software.login,login:"
-msgid "Login"
-msgstr "Registre"
+msgid "User"
+msgstr "Usuari"
 
 msgctxt "field:network.software.login,note:"
 msgid "Notes"

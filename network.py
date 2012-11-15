@@ -12,6 +12,7 @@ __all__ = [
     'NetworkSoftwareType',
     'NetworkSoftware',
     'NetworkSoftwareLogin',
+    'NetworkProtocolType',
     'NetworkProtocol',
 ]
 
@@ -108,7 +109,7 @@ class NetworkSoftwareLogin(ModelSQL, ModelView):
     __name__ = 'network.software.login'
     _rec_name = 'login'
 
-    login = fields.Char('Login', required=True)
+    login = fields.Char('User', required=True)
     password = fields.Char('Password', required=True)
     software = fields.Many2One('network.software', 'Software', required=True)
     note = fields.Text('Notes')
@@ -123,11 +124,23 @@ class NetworkSoftwareLogin(ModelSQL, ModelView):
         return self.software.hardware.id
 
 
+class NetworkProtocolType(ModelSQL, ModelView):
+    'Network Protocol Type'
+    __name__ = 'network.protocol.type'
+
+    name = fields.Char('Protocol Name', required=True)
+
+    @classmethod
+    def __setup__(cls):
+        super(NetworkProtocolType, cls).__setup__()
+        cls._order.insert(0, ('name', 'ASC'))
+
 class NetworkProtocol(ModelSQL, ModelView):
     'Network Protocol'
     __name__ = 'network.protocol'
 
-    name = fields.Char('Protocol Name', required=True)
+    name = fields.Many2One('network.protocol.type', 'Protocol', required=True)
+    note = fields.Text('Notes')
     port = fields.Integer('Port', required=True)
     software_login = fields.Many2One('network.software.login',
             'Software Login', required=True)
