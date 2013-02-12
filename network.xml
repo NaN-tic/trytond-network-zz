@@ -21,6 +21,10 @@ copyright notices and license terms. -->
 
     <!-- Top Menu -->
     <menuitem name="Network" id="menu_network" icon="tryton-network"/>
+    <record model="ir.ui.menu-res.group" id="menu_network_group_network">
+        <field name="menu" ref="menu_network"/>
+        <field name="group" ref="group_network"/>
+    </record>
 
     <!-- network.network -->
     <record model="ir.ui.view" id="network_network_view_tree">
