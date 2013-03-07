@@ -14,8 +14,8 @@ programas y usuarios.
  * Información puertos
  * Información pública y privada de URLs
 
-Módulos que dependen
-====================
+Módulos de los que depende
+==========================
 
 Instalados
 ----------
