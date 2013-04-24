@@ -13,10 +13,3 @@ programas y usuarios.
  * Información servicios
  * Información puertos
  * Información pública y privada de URLs
-
-Dependencias
-------------
-
-* Terceros_
-
-.. _Terceros: ../party/index.html
