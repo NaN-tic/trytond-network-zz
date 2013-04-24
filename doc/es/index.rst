@@ -14,17 +14,6 @@ programas y usuarios.
  * Información puertos
  * Información pública y privada de URLs
 
-Módulos de los que depende
-==========================
-
-Instalados
-----------
-
-.. toctree::
-   :maxdepth: 1
-
-   /party/index
-
 Dependencias
 ------------
 
