@@ -30,43 +30,13 @@ copyright notices and license terms. -->
     <record model="ir.ui.view" id="network_network_view_tree">
         <field name="model">network.network</field>
         <field name="type">tree</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-                <tree string="Networks">
-                    <field name='name'/>
-                    <field name='party'/>
-                    <field name='domain'/>
-                    <field name='ip_address'/>
-                </tree>
-            ]]>
-        </field>
+        <field name="name">network_tree</field>
     </record>
 
     <record model="ir.ui.view" id="network_network_view_form">
         <field name="model">network.network</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="Network" col="4">
-                <label name='name'/>
-                <field name='name'/>
-                <label name='party'/>
-                <field name='party'/>
-                <label name='domain'/>
-                <field name='domain'/>
-                <label name='ip_address'/>
-                <field name='ip_address'/>
-                <notebook colspan="4">
-                    <page string="Hardwares" id="hardwares">
-                        <field name='hardwares'/>
-                    </page>
-                    <page string="Notes" id="note">
-                        <field name='note'/>
-                    </page>
-                </notebook>
-            </form>
-            ]]> 
-        </field>
+        <field name="name">network_form</field>
     </record>
 
     <record model="ir.action.act_window" id="act_network_network">
@@ -112,14 +82,7 @@ copyright notices and license terms. -->
     <record model="ir.ui.view" id="network_hardware_type_view_form">
         <field name="model">network.hardware.type</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="Hardware Type" col="4">
-                <label name='name'/>
-                <field name='name'/>
-            </form>
-            ]]> 
-        </field>
+        <field name="name">hardware_type_form</field>
     </record>
 
     <record model="ir.model.access" id="access_network_hardware_type">
@@ -143,43 +106,13 @@ copyright notices and license terms. -->
     <record model="ir.ui.view" id="network_hardware_view_tree">
         <field name="model">network.hardware</field>
         <field name="type">tree</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <tree string="Hardwares">
-                <field name='name'/>
-                <field name='type'/>
-                <field name='party'/>
-                <field name='network'/>
-            </tree>
-            ]]>
-        </field>
+        <field name="name">hardware_tree</field>
     </record>
 
     <record model="ir.ui.view" id="network_hardware_view_form">
         <field name="model">network.hardware</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="Hardware" col="4">
-                <label name='name'/>
-                <field name='name'/>
-                <label name='type'/>
-                <field name='type'/>
-                <label name='party'/>
-                <field name='party'/>
-                <label name='network'/>
-                <field name='network'/>
-                <notebook colspan="4">
-                    <page string="Softwares" id="softwares">
-                        <field name='softwares'/>
-                    </page>
-                    <page string="Notes" id="note">
-                        <field name='note'/>
-                    </page>
-                </notebook>
-            </form>
-            ]]> 
-        </field>
+        <field name="name">hardware_form</field>
     </record>
 
     <record model="ir.action.act_window" id="act_network_hardware">
@@ -225,14 +158,7 @@ copyright notices and license terms. -->
     <record model="ir.ui.view" id="network_software_type_view_form">
         <field name="model">network.software.type</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="Software Type" col="4">
-                <label name='name'/>
-                <field name='name'/>
-            </form>
-            ]]> 
-        </field>
+        <field name="name">software_type_form</field>
     </record>
 
     <record model="ir.model.access" id="access_network_software_type">
@@ -256,46 +182,13 @@ copyright notices and license terms. -->
     <record model="ir.ui.view" id="network_software_view_tree">
         <field name="model">network.software</field>
         <field name="type">tree</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <tree string="Softwares">
-                <field name='name'/>
-                <field name='type'/>
-                <field name='party'/>
-                <field name='network'/>
-                <field name='hardware'/>
-            </tree>
-            ]]>
-        </field>
+        <field name="name">software_tree</field>
     </record>
 
     <record model="ir.ui.view" id="network_software_view_form">
         <field name="model">network.software</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="Software" col="6">
-                <label name='name'/>
-                <field name='name'/>
-                <label name='type'/>
-                <field name='type'/>
-                <label name='party'/>
-                <field name='party'/>
-                <label name='network'/>
-                <field name='network'/>
-                <label name='hardware'/>
-                <field name='hardware'/>
-                <notebook colspan="6">
-                    <page string="Login Users" id="logins">
-                        <field name='logins' colspan="6"/>
-                    </page>
-                    <page string="Notes" id="note">
-                        <field name='note' colspan="6"/>
-                    </page>
-                </notebook>
-            </form>
-            ]]> 
-        </field>
+        <field name="name">software_form</field>
     </record>
 
     <record model="ir.action.act_window" id="act_network_software">
@@ -341,30 +234,7 @@ copyright notices and license terms. -->
     <record model="ir.ui.view" id="network_software_login_view_form">
         <field name="model">network.software.login</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="Software Type" col="6">
-                <label name='login'/>
-                <field name='login'/>
-                <label name='password'/>
-                <field name='password'/>
-                <label name='superuser'/>
-                <field name='superuser'/>
-                <label name='hardware'/>
-                <field name='hardware'/>
-                <label name='software'/>
-                <field name='software'/>
-                <notebook colspan="6">
-                    <page string="Connection Protocols" id="protocols">
-                        <field name="protocols" colspan="6"/>
-                    </page>
-                    <page string="Notes" id="note">
-                        <field name="note" colspan="6"/>
-                    </page>
-                </notebook>
-            </form>
-            ]]> 
-        </field>
+        <field name="name">login_form</field>
     </record>
 
     <record model="ir.model.access" id="access_network_software_login">
@@ -388,26 +258,13 @@ copyright notices and license terms. -->
     <record model="ir.ui.view" id="network_protocol_type_view_tree">
         <field name="model">network.protocol.type</field>
         <field name="type">tree</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <tree string="Protocols">
-                <field name='name'/>
-            </tree>
-            ]]> 
-        </field>
+        <field name="name">protocol_type_tree</field>
     </record>
 
     <record model="ir.ui.view" id="network_protocol_type_view_form">
         <field name="model">network.protocol.type</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="Protocol" col="6">
-                <label name='name'/>
-                <field name='name'/>
-            </form>
-            ]]> 
-        </field>
+        <field name="name">protocol_type_form</field>
     </record>
 
     <record model="ir.model.access" id="access_network_protocol_type">
@@ -484,29 +341,13 @@ copyright notices and license terms. -->
     <record model="ir.ui.view" id="network_protocol_view_tree">
         <field name="model">network.protocol</field>
         <field name="type">tree</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <tree string="Protocols">
-                <field name='name'/>
-                <field name='port'/>
-            </tree>
-            ]]> 
-        </field>
+        <field name="name">protocol_tree</field>
     </record>
 
     <record model="ir.ui.view" id="network_protocol_view_form">
         <field name="model">network.protocol</field>
         <field name="type">form</field>
-        <field name="arch" type="xml">
-            <![CDATA[
-            <form string="Protocol" col="6">
-                <label name='name'/>
-                <field name='name'/>
-                <label name='port'/>
-                <field name='port'/>
-            </form>
-            ]]> 
-        </field>
+        <field name="name">protocol_form</field>
     </record>
 
     <record model="ir.model.access" id="access_network_protocol">

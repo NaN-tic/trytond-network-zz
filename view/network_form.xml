@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!-- This file is part of network module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<form string="Network">
+    <label name='name'/>
+    <field name='name'/>
+    <label name='party'/>
+    <field name='party'/>
+    <label name='domain'/>
+    <field name='domain'/>
+    <label name='ip_address'/>
+    <field name='ip_address'/>
+    <notebook colspan="4">
+        <page string="Hardwares" id="hardwares">
+            <field name='hardwares'/>
+        </page>
+        <page string="Notes" id="note">
+            <field name='note'/>
+        </page>
+    </notebook>
+</form>

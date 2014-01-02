@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- This file is part of network module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<form string="Software Type" col="6">
+    <label name='login'/>
+    <field name='login'/>
+    <label name='password'/>
+    <field name='password'/>
+    <label name='superuser'/>
+    <field name='superuser'/>
+    <label name='hardware'/>
+    <field name='hardware'/>
+    <label name='software'/>
+    <field name='software'/>
+    <notebook colspan="6">
+        <page string="Connection Protocols" id="protocols">
+            <field name="protocols" colspan="6"/>
+        </page>
+        <page string="Notes" id="note">
+            <field name="note" colspan="6"/>
+        </page>
+    </notebook>
+</form>
