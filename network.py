@@ -96,6 +96,8 @@ class NetworkSoftware(ModelSQL, ModelView):
         )
     logins = fields.One2Many('network.software.login', 'software',
         'Login Users')
+    protocols = fields.One2Many('network.protocol', 'software',
+        'Connection Protocols')
 
     def get_network(self, name):
         return self.hardware.network.id
@@ -117,8 +119,6 @@ class NetworkSoftwareLogin(ModelSQL, ModelView):
             'get_hardware',
         )
     superuser = fields.Boolean('Super User')
-    protocols = fields.One2Many('network.protocol', 'software_login',
-        'Connection Protocols')
 
     def get_hardware(self, login):
         return self.software.hardware.id
@@ -135,6 +135,7 @@ class NetworkProtocolType(ModelSQL, ModelView):
         super(NetworkProtocolType, cls).__setup__()
         cls._order.insert(0, ('name', 'ASC'))
 
+
 class NetworkProtocol(ModelSQL, ModelView):
     'Network Protocol'
     __name__ = 'network.protocol'
@@ -142,5 +143,4 @@ class NetworkProtocol(ModelSQL, ModelView):
     name = fields.Many2One('network.protocol.type', 'Protocol', required=True)
     note = fields.Text('Notes')
     port = fields.Integer('Port', required=True)
-    software_login = fields.Many2One('network.software.login',
-            'Software Login', required=True)
+    software = fields.Many2One('network.software', 'Software', required=True)

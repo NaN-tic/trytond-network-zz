@@ -2,7 +2,7 @@
 <!-- This file is part of network module for Tryton.
 The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license terms. -->
-<form string="Software Type" col="6">
+<form string="Login" col="6">
     <label name='login'/>
     <field name='login'/>
     <label name='password'/>
@@ -13,12 +13,6 @@ copyright notices and license terms. -->
     <field name='hardware'/>
     <label name='software'/>
     <field name='software'/>
-    <notebook colspan="6">
-        <page string="Connection Protocols" id="protocols">
-            <field name="protocols" colspan="6"/>
-        </page>
-        <page string="Notes" id="note">
-            <field name="note" colspan="6"/>
-        </page>
-    </notebook>
+    <separator name="note" colspan="6"/>
+    <field name="note" colspan="6"/>
 </form>
