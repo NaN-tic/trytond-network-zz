@@ -231,6 +231,12 @@ copyright notices and license terms. -->
     </record>
 
     <!-- network.software.login -->
+    <record model="ir.ui.view" id="network_software_login_view_tree">
+        <field name="model">network.software.login</field>
+        <field name="type">tree</field>
+        <field name="name">login_tree</field>
+    </record>
+
     <record model="ir.ui.view" id="network_software_login_view_form">
         <field name="model">network.software.login</field>
         <field name="type">form</field>
