@@ -1,15 +1,13 @@
-==========================
-Redes, Hardware y Software
-==========================
+===============================================
+Redes, hardwares, softwares, usuarios y puertos
+===============================================
 
-Gestión de redes, hardware y software. Permite la gestión de toda la
-infraestructura de una red informática, sus servidores o hardware y sus
-programas y usuarios.
+Permite la gestión de toda la infraestructura de una red informática, sus
+hardwares (servidores y dispositivos) y sus programas con sus puertos de
+conexión y usuarios.
 
- * Información Hardware
- * Información Software
- * Información redes: IP, domain, DNS, gateway.
- * Información protocolos
- * Información servicios
- * Información puertos
- * Información pública y privada de URLs
+ * Redes: IP, dominio y sus hardwares
+ * Hardware: Nombre, tipo y sus softwares
+ * Software: Nombre, tipo, sus usuarios y sus puertos de conexión
+ * Usuarios: Identificador, contraseña y si es superusuario
+ * Puertos de conexión: Protocolo y puerto

@@ -1,12 +1,11 @@
 Network Module
 ##############
 
-The network module allows you organizing your:
+The network module allows you to organize your networks, hardwares (servers and
+devices), softwares and their users and connection ports.
 
- - Hardware information: Type of hardware.
- - Software information: Type of software.
- - Network information: IP, domain, DNS, gateway.
- - Protocols information.
- - Services information.
- - Ports information.
- - Public and private URLs information.
+  * Networks: IP, domain and hardwares
+  * Hardware: Name, type and softwares
+  * Software: Name, type and its users and connection ports
+  * Users: Identifier, password and if it is a superuser
+  * Connection Ports: Protocol and port
