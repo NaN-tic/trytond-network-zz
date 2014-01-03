@@ -2,6 +2,8 @@
 <!-- This file is part of network module for Tryton.
 The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license terms. -->
-<tree string="Protocols">
-    <field name='name'/>
+<tree string="Services">
+    <field name='protocol'/>
+    <field name='port'/>
+    <field name='url'/>
 </tree>

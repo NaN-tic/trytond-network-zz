@@ -13,6 +13,6 @@ def register():
         NetworkSoftwareType,
         NetworkSoftware,
         NetworkSoftwareLogin,
-        NetworkProtocolType,
         NetworkProtocol,
+        NetworkSoftwareService,
         module='network', type_='model')

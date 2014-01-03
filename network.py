@@ -11,8 +11,8 @@ __all__ = [
     'NetworkSoftwareType',
     'NetworkSoftware',
     'NetworkSoftwareLogin',
-    'NetworkProtocolType',
     'NetworkProtocol',
+    'NetworkSoftwareService',
 ]
 
 
@@ -99,8 +99,8 @@ class NetworkSoftware(ModelSQL, ModelView):
         )
     logins = fields.One2Many('network.software.login', 'software',
         'Login Users')
-    protocols = fields.One2Many('network.protocol', 'software',
-        'Connection Protocols')
+    services = fields.One2Many('network.software.service', 'software',
+        'Connection Services')
 
     def get_network(self, name):
         return self.hardware.network.id
@@ -149,56 +149,57 @@ class NetworkSoftwareLogin(ModelSQL, ModelView):
     @classmethod
     @ModelView.button
     def compute_url(cls, logins):
-        Protocol = Pool().get('network.protocol')
+        Service = Pool().get('network.software.service')
         for login in logins:
-            protocols = Protocol.search([('software', '=', login.software)])
+            services = Service.search([('software', '=', login.software)])
             url = login.software.network.domain
             if not url:
                 url = login.software.network.ip_address
-            if url and protocols:
-                protocol = protocols[0]
-                login.url = (protocol.name.name.lower() + "://" + login.login +
-                    "@" + url + ":" + str(protocol.port))
+            if url and services:
+                service = services[0]
+                login.url = (service.protocol.name.lower() + "://" +
+                    login.login + "@" + url + ":" + str(service.port))
                 login.save()
-
-
-class NetworkProtocolType(ModelSQL, ModelView):
-    'Network Protocol Type'
-    __name__ = 'network.protocol.type'
-
-    name = fields.Char('Protocol Name', required=True)
-
-    @classmethod
-    def __setup__(cls):
-        super(NetworkProtocolType, cls).__setup__()
-        cls._order.insert(0, ('name', 'ASC'))
 
 
 class NetworkProtocol(ModelSQL, ModelView):
     'Network Protocol'
     __name__ = 'network.protocol'
 
-    name = fields.Many2One('network.protocol.type', 'Protocol', required=True)
-    note = fields.Text('Notes')
-    port = fields.Integer('Port', required=True)
-    software = fields.Many2One('network.software', 'Software', required=True)
-    url = fields.Char('URL')
+    name = fields.Char('Protocol Name', required=True)
 
     @classmethod
     def __setup__(cls):
         super(NetworkProtocol, cls).__setup__()
+        cls._order.insert(0, ('name', 'ASC'))
+
+
+class NetworkSoftwareService(ModelSQL, ModelView):
+    'Network Software Service'
+    __name__ = 'network.software.service'
+    _rec_name = 'url'
+
+    protocol = fields.Many2One('network.protocol', 'Protocol', required=True)
+    port = fields.Integer('Port', required=True)
+    software = fields.Many2One('network.software', 'Software', required=True)
+    note = fields.Text('Notes')
+    url = fields.Char('URL')
+
+    @classmethod
+    def __setup__(cls):
+        super(NetworkSoftwareService, cls).__setup__()
         cls._buttons.update({
                 'compute_url': {},
                 })
 
     @classmethod
     @ModelView.button
-    def compute_url(cls, protocols):
-        for protocol in protocols:
-            url = protocol.software.network.domain
+    def compute_url(cls, services):
+        for service in services:
+            url = service.software.network.domain
             if not url:
-                url = protocol.software.network.ip_address
+                url = service.software.network.ip_address
             if url:
-                protocol.url = (protocol.name.name.lower() + "://" + url + ":" +
-                    str(protocol.port))
-                protocol.save()
+                service.url = (service.protocol.name.lower() + "://" + url +
+                    ":" + str(service.port))
+                service.save()

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- This file is part of network module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<form string="Service">
+    <label name='protocol'/>
+    <field name='protocol'/>
+    <label name='port'/>
+    <field name='port'/>
+    <button name="compute_url" string="Compute _URL" icon="tryton-go-next"/>
+    <field name='url'/>
+    <separator name="note" colspan="6"/>
+    <field name="note" colspan="6"/>
+</form>

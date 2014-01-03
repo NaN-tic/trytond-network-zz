@@ -14,8 +14,8 @@ copyright notices and license terms. -->
     <label name='hardware'/>
     <field name='hardware'/>
     <notebook colspan="6">
-        <page string="Login Protocols and Users" id="logins">
-            <field name="protocols" colspan="6"/>
+        <page string="Login Services and Users" id="logins">
+            <field name="services" colspan="6"/>
             <field name='logins' colspan="6"/>
         </page>
         <page string="Notes" id="note">
