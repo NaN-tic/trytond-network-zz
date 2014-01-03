@@ -67,10 +67,14 @@ class NetworkHardware(ModelSQL, ModelView):
     note = fields.Text('Notes')
     softwares = fields.One2Many('network.software', 'hardware', 'Softwares')
     party = fields.Function(fields.Many2One('party.party', 'Party'),
-            'get_party')
+            'get_party', searcher='search_party')
 
     def get_party(self, name):
         return self.network.party.id
+
+    @classmethod
+    def search_party(cls, name, clause):
+        return [('network.%s' % name,) + tuple(clause[1:])]
 
 
 class NetworkSoftwareType(ModelSQL, ModelView):
@@ -89,10 +93,10 @@ class NetworkSoftware(ModelSQL, ModelView):
     type = fields.Many2One('network.software.type', 'Software Type')
     note = fields.Text('Notes')
     network = fields.Function(fields.Many2One('network.network', 'Network'),
-            'get_network',
+            'get_network', searcher='search_network'
         )
     party = fields.Function(fields.Many2One('party.party', 'Party'),
-            'get_party',
+            'get_party', searcher='search_party'
         )
     logins = fields.One2Many('network.software.login', 'software',
         'Login Users')
@@ -102,8 +106,16 @@ class NetworkSoftware(ModelSQL, ModelView):
     def get_network(self, name):
         return self.hardware.network.id
 
+    @classmethod
+    def search_network(cls, name, clause):
+        return [('hardware.%s' % name,) + tuple(clause[1:])]
+
     def get_party(self, name):
         return self.hardware.network.party.id
+
+    @classmethod
+    def search_party(cls, name, clause):
+        return [('hardware.network.%s' % name,) + tuple(clause[1:])]
 
 
 class NetworkSoftwareLogin(ModelSQL, ModelView):
