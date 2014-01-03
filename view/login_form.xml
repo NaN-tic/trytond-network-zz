@@ -9,6 +9,8 @@ copyright notices and license terms. -->
     <field name='password'/>
     <label name='superuser'/>
     <field name='superuser'/>
+    <button name="compute_url" string="Compute _URL" icon="tryton-go-next"/>
+    <field name='url'/>
     <label name='hardware'/>
     <field name='hardware'/>
     <label name='software'/>

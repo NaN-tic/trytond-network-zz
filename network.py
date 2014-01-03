@@ -1,9 +1,8 @@
 #This file is part of network module for Tryton.
 #The COPYRIGHT file at the top level of this repository contains 
 #the full copyright notices and license terms.
-
 from trytond.model import ModelSQL, ModelView, fields
-
+from trytond.pool import Pool
 
 __all__ = [
     'Network',
@@ -126,14 +125,41 @@ class NetworkSoftwareLogin(ModelSQL, ModelView):
     login = fields.Char('User', required=True)
     password = fields.Char('Password', required=True)
     software = fields.Many2One('network.software', 'Software', required=True)
+    url = fields.Char('URL')
     note = fields.Text('Notes')
     hardware = fields.Function(fields.Many2One('network.hardware', 'Hardware'),
-            'get_hardware',
+            'get_hardware', searcher='search_hardware'
         )
     superuser = fields.Boolean('Super User')
 
+    @classmethod
+    def __setup__(cls):
+        super(NetworkSoftwareLogin, cls).__setup__()
+        cls._buttons.update({
+                'compute_url': {},
+                })
+
     def get_hardware(self, login):
         return self.software.hardware.id
+
+    @classmethod
+    def search_hardware(cls, name, clause):
+        return [('software.%s' % name,) + tuple(clause[1:])]
+
+    @classmethod
+    @ModelView.button
+    def compute_url(cls, logins):
+        Protocol = Pool().get('network.protocol')
+        for login in logins:
+            protocols = Protocol.search([('software', '=', login.software)])
+            url = login.software.network.domain
+            if not url:
+                url = login.software.network.ip_address
+            if url and protocols:
+                protocol = protocols[0]
+                login.url = (protocol.name.name.lower() + "://" + login.login +
+                    "@" + url + ":" + str(protocol.port))
+                login.save()
 
 
 class NetworkProtocolType(ModelSQL, ModelView):
@@ -156,3 +182,23 @@ class NetworkProtocol(ModelSQL, ModelView):
     note = fields.Text('Notes')
     port = fields.Integer('Port', required=True)
     software = fields.Many2One('network.software', 'Software', required=True)
+    url = fields.Char('URL')
+
+    @classmethod
+    def __setup__(cls):
+        super(NetworkProtocol, cls).__setup__()
+        cls._buttons.update({
+                'compute_url': {},
+                })
+
+    @classmethod
+    @ModelView.button
+    def compute_url(cls, protocols):
+        for protocol in protocols:
+            url = protocol.software.network.domain
+            if not url:
+                url = protocol.software.network.ip_address
+            if url:
+                protocol.url = (protocol.name.name.lower() + "://" + url + ":" +
+                    str(protocol.port))
+                protocol.save()

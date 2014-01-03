@@ -5,4 +5,5 @@ copyright notices and license terms. -->
 <tree string="Logins">
     <field name='login'/>
     <field name='superuser'/>
+    <field name='url'/>
 </tree>

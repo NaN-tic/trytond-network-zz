@@ -5,4 +5,5 @@ copyright notices and license terms. -->
 <tree string="Protocols">
     <field name='name'/>
     <field name='port'/>
+    <field name='url'/>
 </tree>
