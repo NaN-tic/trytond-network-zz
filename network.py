@@ -34,7 +34,7 @@ class Network(ModelSQL, ModelView):
             ('check_domain_or_ip_address', 'domain_or_ip_address_needed'),
         ]
         cls._error_messages.update({
-            'domain_or_ip_address_needed':
+                'domain_or_ip_address_needed':
                     'You must set at least the domain or IP address.',
         })
 
@@ -48,7 +48,7 @@ class NetworkHardwareType(ModelSQL, ModelView):
     "Network"
     __name__ = 'network.hardware.type'
 
-    name = fields.Char('Type of hardware', required=True, translate=True)
+    name = fields.Char('Hardware Type Name', required=True, translate=True)
 
     @staticmethod
     def default_networkable():
@@ -130,7 +130,7 @@ class NetworkSoftwareLogin(ModelSQL, ModelView):
     hardware = fields.Function(fields.Many2One('network.hardware', 'Hardware'),
             'get_hardware', searcher='search_hardware'
         )
-    superuser = fields.Boolean('Super User')
+    superuser = fields.Boolean('Is Super User')
 
     @classmethod
     def __setup__(cls):
@@ -177,7 +177,7 @@ class NetworkProtocol(ModelSQL, ModelView):
 class NetworkSoftwareService(ModelSQL, ModelView):
     'Network Software Service'
     __name__ = 'network.software.service'
-    _rec_name = 'url'
+    _rec_name = 'port'
 
     protocol = fields.Many2One('network.protocol', 'Protocol', required=True)
     port = fields.Integer('Port', required=True)

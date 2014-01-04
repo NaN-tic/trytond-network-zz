@@ -1,23 +1,23 @@
-===============================================
-Redes, hardwares, softwares, usuarios y puertos
-===============================================
+=================================================
+Redes, hardwares, softwares, usuarios y servicios
+=================================================
 
 Permite la gestión de toda la infraestructura de una red informática con sus
-hardwares (servidores y dispositivos) y sus programas con sus puertos de
+hardwares (servidores y dispositivos) y sus programas con sus servicios de
 conexión y usuarios.
 
  * Redes: IP, dominio y sus hardwares
  * Hardware: Nombre, tipo y sus softwares
- * Software: Nombre, tipo, sus usuarios y sus puertos de conexión
+ * Software: Nombre, tipo, sus usuarios y sus servicios de conexión
  * Usuarios: Identificador, contraseña y si es superusuario
- * Puertos de conexión: Protocolo y puerto
+ * Servicios de conexión: Protocolo y puerto
 
 .. inheritref:: network/network:section:grupos
 
 Grupos
 ------
 
-* Network: Gestiona las redes, hardware y software
+* Network: Gestiona las redes, hardwares y softwares
 
 .. inheritref:: network/network:section:menus
 
