@@ -4,7 +4,7 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "error:network.network:"
 msgid "You must set at least the domain or IP address."
-msgstr "Heu de configurar al menys el domini o l'adreça IP."
+msgstr "Heu de configurar almenys el domini o l'adreça IP."
 
 msgctxt "field:network.hardware,create_date:"
 msgid "Create Date"
@@ -16,7 +16,7 @@ msgstr "Usuari de creació"
 
 msgctxt "field:network.hardware,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.hardware,name:"
 msgid "Device Name"
@@ -28,7 +28,7 @@ msgstr "Xarxa"
 
 msgctxt "field:network.hardware,note:"
 msgid "Notes"
-msgstr "Notes"
+msgstr "Observacions"
 
 msgctxt "field:network.hardware,party:"
 msgid "Party"
@@ -48,11 +48,11 @@ msgstr "Tipus de maquinari"
 
 msgctxt "field:network.hardware,write_date:"
 msgid "Write Date"
-msgstr "Data d'escriptura"
+msgstr "Data modificació"
 
 msgctxt "field:network.hardware,write_uid:"
 msgid "Write User"
-msgstr "Usuari d'escriptura"
+msgstr "Usuari modificació"
 
 msgctxt "field:network.hardware.type,create_date:"
 msgid "Create Date"
@@ -64,11 +64,11 @@ msgstr "Usuari de creació"
 
 msgctxt "field:network.hardware.type,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.hardware.type,name:"
-msgid "Type of hardware"
-msgstr "Tipus de maquinari"
+msgid "Hardware Type Name"
+msgstr "Nom del tipus de maquinari"
 
 msgctxt "field:network.hardware.type,rec_name:"
 msgid "Name"
@@ -76,11 +76,11 @@ msgstr "Nom"
 
 msgctxt "field:network.hardware.type,write_date:"
 msgid "Write Date"
-msgstr "Data d'escriptura"
+msgstr "Data modificació"
 
 msgctxt "field:network.hardware.type,write_uid:"
 msgid "Write User"
-msgstr "Usuari d'escriptura"
+msgstr "Usuari modificació"
 
 msgctxt "field:network.network,create_date:"
 msgid "Create Date"
@@ -100,7 +100,7 @@ msgstr "Maquinaris"
 
 msgctxt "field:network.network,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.network,ip_address:"
 msgid "IP Address"
@@ -108,11 +108,11 @@ msgstr "Adreça IP"
 
 msgctxt "field:network.network,name:"
 msgid "Network name"
-msgstr "Nom de xarxa"
+msgstr "Nom de la xarxa"
 
 msgctxt "field:network.network,note:"
 msgid "Notes"
-msgstr "Notes"
+msgstr "Observacions"
 
 msgctxt "field:network.network,party:"
 msgid "Party"
@@ -124,11 +124,11 @@ msgstr "Nom"
 
 msgctxt "field:network.network,write_date:"
 msgid "Write Date"
-msgstr "Data d'escriptura"
+msgstr "Data modificació"
 
 msgctxt "field:network.network,write_uid:"
 msgid "Write User"
-msgstr "Usuari d'escriptura"
+msgstr "Usuari modificació"
 
 msgctxt "field:network.protocol,create_date:"
 msgid "Create Date"
@@ -140,31 +140,23 @@ msgstr "Usuari de creació"
 
 msgctxt "field:network.protocol,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.protocol,name:"
 msgid "Protocol Name"
 msgstr "Nom del protocol"
 
-msgctxt "field:network.protocol,port:"
-msgid "Port"
-msgstr "Port"
-
 msgctxt "field:network.protocol,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:network.protocol,software_login:"
-msgid "Software Login"
-msgstr "Registre de programari"
-
 msgctxt "field:network.protocol,write_date:"
 msgid "Write Date"
-msgstr "Data d'escriptura"
+msgstr "Data modificació"
 
 msgctxt "field:network.protocol,write_uid:"
 msgid "Write User"
-msgstr "Usuari d'escriptura"
+msgstr "Usuari modificació"
 
 msgctxt "field:network.software,create_date:"
 msgid "Create Date"
@@ -180,15 +172,15 @@ msgstr "Maquinari"
 
 msgctxt "field:network.software,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.software,logins:"
 msgid "Login Users"
-msgstr "Usuaris registrats"
+msgstr "Usuaris"
 
 msgctxt "field:network.software,name:"
 msgid "Software name"
-msgstr "Nom de programari"
+msgstr "Nom del programari"
 
 msgctxt "field:network.software,network:"
 msgid "Network"
@@ -196,7 +188,7 @@ msgstr "Xarxa"
 
 msgctxt "field:network.software,note:"
 msgid "Notes"
-msgstr "Notes"
+msgstr "Observacions"
 
 msgctxt "field:network.software,party:"
 msgid "Party"
@@ -206,17 +198,21 @@ msgctxt "field:network.software,rec_name:"
 msgid "Name"
 msgstr "Nom"
 
+msgctxt "field:network.software,services:"
+msgid "Connection Services"
+msgstr "Serveis de connexió"
+
 msgctxt "field:network.software,type:"
 msgid "Software Type"
 msgstr "Tipus de programari"
 
 msgctxt "field:network.software,write_date:"
 msgid "Write Date"
-msgstr "Data d'escriptura"
+msgstr "Data modificació"
 
 msgctxt "field:network.software,write_uid:"
 msgid "Write User"
-msgstr "Usuari d'escriptura"
+msgstr "Usuari modificació"
 
 msgctxt "field:network.software.login,create_date:"
 msgid "Create Date"
@@ -232,7 +228,7 @@ msgstr "Maquinari"
 
 msgctxt "field:network.software.login,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.software.login,login:"
 msgid "User"
@@ -240,15 +236,11 @@ msgstr "Usuari"
 
 msgctxt "field:network.software.login,note:"
 msgid "Notes"
-msgstr "Notes"
+msgstr "Observacions"
 
 msgctxt "field:network.software.login,password:"
 msgid "Password"
 msgstr "Contrasenya"
-
-msgctxt "field:network.software.login,protocols:"
-msgid "Connection Protocols"
-msgstr "Protocols de connexió"
 
 msgctxt "field:network.software.login,rec_name:"
 msgid "Name"
@@ -259,16 +251,64 @@ msgid "Software"
 msgstr "Programari"
 
 msgctxt "field:network.software.login,superuser:"
-msgid "Super User"
-msgstr "Super usuari"
+msgid "Is Super User"
+msgstr "És super usuari"
+
+msgctxt "field:network.software.login,url:"
+msgid "URL"
+msgstr "URL"
 
 msgctxt "field:network.software.login,write_date:"
 msgid "Write Date"
-msgstr "Data d'escriptura"
+msgstr "Data modificació"
 
 msgctxt "field:network.software.login,write_uid:"
 msgid "Write User"
-msgstr "Usuari d'escriptura"
+msgstr "Usuari modificació"
+
+msgctxt "field:network.software.service,create_date:"
+msgid "Create Date"
+msgstr "Data de creació"
+
+msgctxt "field:network.software.service,create_uid:"
+msgid "Create User"
+msgstr "Usuari de creació"
+
+msgctxt "field:network.software.service,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:network.software.service,note:"
+msgid "Notes"
+msgstr "Observacions"
+
+msgctxt "field:network.software.service,port:"
+msgid "Port"
+msgstr "Port"
+
+msgctxt "field:network.software.service,protocol:"
+msgid "Protocol"
+msgstr "Protocol"
+
+msgctxt "field:network.software.service,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:network.software.service,software:"
+msgid "Software"
+msgstr "Programari"
+
+msgctxt "field:network.software.service,url:"
+msgid "URL"
+msgstr "URL"
+
+msgctxt "field:network.software.service,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:network.software.service,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
 
 msgctxt "field:network.software.type,create_date:"
 msgid "Create Date"
@@ -280,11 +320,11 @@ msgstr "Usuari de creació"
 
 msgctxt "field:network.software.type,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.software.type,name:"
 msgid "Software Type Name"
-msgstr "Nom de tipus de programari"
+msgstr "Nom del tipus de programari"
 
 msgctxt "field:network.software.type,rec_name:"
 msgid "Name"
@@ -292,11 +332,11 @@ msgstr "Nom"
 
 msgctxt "field:network.software.type,write_date:"
 msgid "Write Date"
-msgstr "Data d'escriptura"
+msgstr "Data modificació"
 
 msgctxt "field:network.software.type,write_uid:"
 msgid "Write User"
-msgstr "Usuari d'escriptura"
+msgstr "Usuari modificació"
 
 msgctxt "model:ir.action,name:act_network_hardware"
 msgid "Hardware"
@@ -311,20 +351,20 @@ msgid "Software"
 msgstr "Programari"
 
 msgctxt "model:ir.ui.menu,name:menu_network"
-msgid "Network"
-msgstr "Xarxa"
+msgid "Networks"
+msgstr "Xarxes"
 
 msgctxt "model:ir.ui.menu,name:menu_network_hardware"
-msgid "Hardware"
-msgstr "Maquinari"
+msgid "Hardwares"
+msgstr "Maquinaris"
 
 msgctxt "model:ir.ui.menu,name:menu_network_network"
-msgid "Network"
-msgstr "Xarxa"
+msgid "Networks"
+msgstr "Xarxes"
 
 msgctxt "model:ir.ui.menu,name:menu_network_software"
-msgid "Software"
-msgstr "Programari"
+msgid "Softwares"
+msgstr "Programaris"
 
 msgctxt "model:network.hardware,name:"
 msgid "Network Hardware"
@@ -344,15 +384,19 @@ msgstr "Protocol de xarxa"
 
 msgctxt "model:network.software,name:"
 msgid "Network Software"
-msgstr "Programari de xarxa"
+msgstr "Xarxa: Programari"
 
 msgctxt "model:network.software.login,name:"
 msgid "Network Software Login"
-msgstr "Registre de programari de xarxa"
+msgstr "Xarxa: Usuari de programari"
+
+msgctxt "model:network.software.service,name:"
+msgid "Network Software Service"
+msgstr "Xarxa: Servei de programari"
 
 msgctxt "model:network.software.type,name:"
 msgid "Network Software Type"
-msgstr "Tipus de programari de xarxa"
+msgstr "Xarxa: Tipus de programari"
 
 msgctxt "model:res.group,name:group_network"
 msgid "Network"
@@ -372,7 +416,7 @@ msgstr "Maquinaris"
 
 msgctxt "view:network.hardware:"
 msgid "Notes"
-msgstr "Notes"
+msgstr "Observacions"
 
 msgctxt "view:network.hardware:"
 msgid "Softwares"
@@ -392,7 +436,7 @@ msgstr "Xarxes"
 
 msgctxt "view:network.network:"
 msgid "Notes"
-msgstr "Notes"
+msgstr "Observacions"
 
 msgctxt "view:network.protocol:"
 msgid "Protocol"
@@ -403,28 +447,40 @@ msgid "Protocols"
 msgstr "Protocols"
 
 msgctxt "view:network.software.login:"
-msgid "Connection Protocols"
-msgstr "Protocols de connexió"
+msgid "Compute _URL"
+msgstr "Calcula _URL"
 
 msgctxt "view:network.software.login:"
-msgid "Notes"
-msgstr "Notes"
+msgid "Login"
+msgstr "Usuari"
 
 msgctxt "view:network.software.login:"
-msgid "Software Type"
-msgstr "Tipus de programari"
+msgid "Logins"
+msgstr "Usuaris"
+
+msgctxt "view:network.software.service:"
+msgid "Compute _URL"
+msgstr "Calcula _URL"
+
+msgctxt "view:network.software.service:"
+msgid "Service"
+msgstr "Servei"
+
+msgctxt "view:network.software.service:"
+msgid "Services"
+msgstr "Serveis"
 
 msgctxt "view:network.software.type:"
 msgid "Software Type"
 msgstr "Tipus de programari"
 
 msgctxt "view:network.software:"
-msgid "Login Users"
-msgstr "Usuaris registrats"
+msgid "Login Services and Users"
+msgstr "Serveis i usuaris"
 
 msgctxt "view:network.software:"
 msgid "Notes"
-msgstr "Notes"
+msgstr "Observacions"
 
 msgctxt "view:network.software:"
 msgid "Software"

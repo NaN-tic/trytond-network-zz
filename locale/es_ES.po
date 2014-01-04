@@ -16,7 +16,7 @@ msgstr "Usuario de creación"
 
 msgctxt "field:network.hardware,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.hardware,name:"
 msgid "Device Name"
@@ -28,7 +28,7 @@ msgstr "Red"
 
 msgctxt "field:network.hardware,note:"
 msgid "Notes"
-msgstr "Notas"
+msgstr "Observaciones"
 
 msgctxt "field:network.hardware,party:"
 msgid "Party"
@@ -40,7 +40,7 @@ msgstr "Nombre"
 
 msgctxt "field:network.hardware,softwares:"
 msgid "Softwares"
-msgstr "Programas"
+msgstr "Softwares"
 
 msgctxt "field:network.hardware,type:"
 msgid "Hardware type"
@@ -48,11 +48,11 @@ msgstr "Tipo de hardware"
 
 msgctxt "field:network.hardware,write_date:"
 msgid "Write Date"
-msgstr "Fecha de escritura"
+msgstr "Fecha modificación"
 
 msgctxt "field:network.hardware,write_uid:"
 msgid "Write User"
-msgstr "Usuario de escritura"
+msgstr "Usuario modificación"
 
 msgctxt "field:network.hardware.type,create_date:"
 msgid "Create Date"
@@ -64,11 +64,11 @@ msgstr "Usuario de creación"
 
 msgctxt "field:network.hardware.type,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.hardware.type,name:"
-msgid "Type of hardware"
-msgstr "Tipo de hardware"
+msgid "Hardware Type Name"
+msgstr "Nombre del tipo de hardware"
 
 msgctxt "field:network.hardware.type,rec_name:"
 msgid "Name"
@@ -76,11 +76,11 @@ msgstr "Nombre"
 
 msgctxt "field:network.hardware.type,write_date:"
 msgid "Write Date"
-msgstr "Fecha de escritura"
+msgstr "Fecha modificación"
 
 msgctxt "field:network.hardware.type,write_uid:"
 msgid "Write User"
-msgstr "Usuario de escritura"
+msgstr "Usuario modificación"
 
 msgctxt "field:network.network,create_date:"
 msgid "Create Date"
@@ -100,7 +100,7 @@ msgstr "Hardwares"
 
 msgctxt "field:network.network,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.network,ip_address:"
 msgid "IP Address"
@@ -108,11 +108,11 @@ msgstr "Dirección IP"
 
 msgctxt "field:network.network,name:"
 msgid "Network name"
-msgstr "Nombre de red"
+msgstr "Nombre de la red"
 
 msgctxt "field:network.network,note:"
 msgid "Notes"
-msgstr "Notas"
+msgstr "Observaciones"
 
 msgctxt "field:network.network,party:"
 msgid "Party"
@@ -124,11 +124,11 @@ msgstr "Nombre"
 
 msgctxt "field:network.network,write_date:"
 msgid "Write Date"
-msgstr "Fecha de escritura"
+msgstr "Fecha modificación"
 
 msgctxt "field:network.network,write_uid:"
 msgid "Write User"
-msgstr "Usuario de escritura"
+msgstr "Usuario modificación"
 
 msgctxt "field:network.protocol,create_date:"
 msgid "Create Date"
@@ -140,31 +140,23 @@ msgstr "Usuario de creación"
 
 msgctxt "field:network.protocol,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.protocol,name:"
 msgid "Protocol Name"
-msgstr "Nombre de protocolo"
-
-msgctxt "field:network.protocol,port:"
-msgid "Port"
-msgstr "Puerto"
+msgstr "Nombre del protocolo"
 
 msgctxt "field:network.protocol,rec_name:"
 msgid "Name"
 msgstr "Nombre"
 
-msgctxt "field:network.protocol,software_login:"
-msgid "Software Login"
-msgstr "Registro de programa"
-
 msgctxt "field:network.protocol,write_date:"
 msgid "Write Date"
-msgstr "Fecha de escritura"
+msgstr "Fecha modificación"
 
 msgctxt "field:network.protocol,write_uid:"
 msgid "Write User"
-msgstr "Usuario de escritura"
+msgstr "Usuario modificación"
 
 msgctxt "field:network.software,create_date:"
 msgid "Create Date"
@@ -180,15 +172,15 @@ msgstr "Hardware"
 
 msgctxt "field:network.software,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.software,logins:"
 msgid "Login Users"
-msgstr "Usuarios registrados"
+msgstr "Usuarios"
 
 msgctxt "field:network.software,name:"
 msgid "Software name"
-msgstr "Nombre de programa"
+msgstr "Nombre del software"
 
 msgctxt "field:network.software,network:"
 msgid "Network"
@@ -196,7 +188,7 @@ msgstr "Red"
 
 msgctxt "field:network.software,note:"
 msgid "Notes"
-msgstr "Notas"
+msgstr "Observaciones"
 
 msgctxt "field:network.software,party:"
 msgid "Party"
@@ -206,17 +198,21 @@ msgctxt "field:network.software,rec_name:"
 msgid "Name"
 msgstr "Nombre"
 
+msgctxt "field:network.software,services:"
+msgid "Connection Services"
+msgstr "Servicios de conexión"
+
 msgctxt "field:network.software,type:"
 msgid "Software Type"
-msgstr "Tipo de programa"
+msgstr "Tipo de software"
 
 msgctxt "field:network.software,write_date:"
 msgid "Write Date"
-msgstr "Fecha de escritura"
+msgstr "Fecha modificación"
 
 msgctxt "field:network.software,write_uid:"
 msgid "Write User"
-msgstr "Usuario de escritura"
+msgstr "Usuario modificación"
 
 msgctxt "field:network.software.login,create_date:"
 msgid "Create Date"
@@ -232,7 +228,7 @@ msgstr "Hardware"
 
 msgctxt "field:network.software.login,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.software.login,login:"
 msgid "User"
@@ -240,15 +236,11 @@ msgstr "Usuario"
 
 msgctxt "field:network.software.login,note:"
 msgid "Notes"
-msgstr "Notas"
+msgstr "Observaciones"
 
 msgctxt "field:network.software.login,password:"
 msgid "Password"
 msgstr "Contraseña"
-
-msgctxt "field:network.software.login,protocols:"
-msgid "Connection Protocols"
-msgstr "Protocolo de conexión"
 
 msgctxt "field:network.software.login,rec_name:"
 msgid "Name"
@@ -256,19 +248,67 @@ msgstr "Nombre"
 
 msgctxt "field:network.software.login,software:"
 msgid "Software"
-msgstr "Programa"
+msgstr "Software"
 
 msgctxt "field:network.software.login,superuser:"
-msgid "Super User"
-msgstr "Super usuario"
+msgid "Is Super User"
+msgstr "Es super usuario"
+
+msgctxt "field:network.software.login,url:"
+msgid "URL"
+msgstr "URL"
 
 msgctxt "field:network.software.login,write_date:"
 msgid "Write Date"
-msgstr "Fecha de escritura"
+msgstr "Fecha modificación"
 
 msgctxt "field:network.software.login,write_uid:"
 msgid "Write User"
-msgstr "Usuario de escritura"
+msgstr "Usuario modificación"
+
+msgctxt "field:network.software.service,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:network.software.service,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:network.software.service,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:network.software.service,note:"
+msgid "Notes"
+msgstr "Observaciones"
+
+msgctxt "field:network.software.service,port:"
+msgid "Port"
+msgstr "Puerto"
+
+msgctxt "field:network.software.service,protocol:"
+msgid "Protocol"
+msgstr "Protocolo"
+
+msgctxt "field:network.software.service,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:network.software.service,software:"
+msgid "Software"
+msgstr "Software"
+
+msgctxt "field:network.software.service,url:"
+msgid "URL"
+msgstr "URL"
+
+msgctxt "field:network.software.service,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:network.software.service,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
 
 msgctxt "field:network.software.type,create_date:"
 msgid "Create Date"
@@ -280,11 +320,11 @@ msgstr "Usuario de creación"
 
 msgctxt "field:network.software.type,id:"
 msgid "ID"
-msgstr "Id"
+msgstr "ID"
 
 msgctxt "field:network.software.type,name:"
 msgid "Software Type Name"
-msgstr "Tipo de programa"
+msgstr "Nombre del tipo de software"
 
 msgctxt "field:network.software.type,rec_name:"
 msgid "Name"
@@ -292,11 +332,11 @@ msgstr "Nombre"
 
 msgctxt "field:network.software.type,write_date:"
 msgid "Write Date"
-msgstr "Fecha de escritura"
+msgstr "Fecha modificación"
 
 msgctxt "field:network.software.type,write_uid:"
 msgid "Write User"
-msgstr "Usuario de escritura"
+msgstr "Usuario modificación"
 
 msgctxt "model:ir.action,name:act_network_hardware"
 msgid "Hardware"
@@ -308,23 +348,23 @@ msgstr "Red"
 
 msgctxt "model:ir.action,name:act_network_software"
 msgid "Software"
-msgstr "Programa"
+msgstr "Software"
 
 msgctxt "model:ir.ui.menu,name:menu_network"
-msgid "Network"
-msgstr "Red"
+msgid "Networks"
+msgstr "Redes"
 
 msgctxt "model:ir.ui.menu,name:menu_network_hardware"
-msgid "Hardware"
-msgstr "Hardware"
+msgid "Hardwares"
+msgstr "Hardwares"
 
 msgctxt "model:ir.ui.menu,name:menu_network_network"
-msgid "Network"
-msgstr "Red"
+msgid "Networks"
+msgstr "Redes"
 
 msgctxt "model:ir.ui.menu,name:menu_network_software"
-msgid "Software"
-msgstr "Programa"
+msgid "Softwares"
+msgstr "Softwares"
 
 msgctxt "model:network.hardware,name:"
 msgid "Network Hardware"
@@ -344,15 +384,19 @@ msgstr "Protocolo de red"
 
 msgctxt "model:network.software,name:"
 msgid "Network Software"
-msgstr "Programas de red"
+msgstr "Red: Software"
 
 msgctxt "model:network.software.login,name:"
 msgid "Network Software Login"
-msgstr "Registro de programa de red"
+msgstr "Red: Usuario del software"
+
+msgctxt "model:network.software.service,name:"
+msgid "Network Software Service"
+msgstr "Red: Servicio del Software"
 
 msgctxt "model:network.software.type,name:"
 msgid "Network Software Type"
-msgstr "Tipo de programa de red"
+msgstr "Red: Tipo de programa"
 
 msgctxt "model:res.group,name:group_network"
 msgid "Network"
@@ -372,11 +416,11 @@ msgstr "Hardwares"
 
 msgctxt "view:network.hardware:"
 msgid "Notes"
-msgstr "Notas"
+msgstr "Observaciones"
 
 msgctxt "view:network.hardware:"
 msgid "Softwares"
-msgstr "Programas"
+msgstr "Softwares"
 
 msgctxt "view:network.network:"
 msgid "Hardwares"
@@ -392,7 +436,7 @@ msgstr "Redes"
 
 msgctxt "view:network.network:"
 msgid "Notes"
-msgstr "Notas"
+msgstr "Observaciones"
 
 msgctxt "view:network.protocol:"
 msgid "Protocol"
@@ -403,33 +447,45 @@ msgid "Protocols"
 msgstr "Protocolos"
 
 msgctxt "view:network.software.login:"
-msgid "Connection Protocols"
-msgstr "Protocolo de conexión"
+msgid "Compute _URL"
+msgstr "Calcular _URL"
 
 msgctxt "view:network.software.login:"
-msgid "Notes"
-msgstr "Notas"
+msgid "Login"
+msgstr "Usuario"
 
 msgctxt "view:network.software.login:"
-msgid "Software Type"
-msgstr "Tipo de programa"
+msgid "Logins"
+msgstr "Usuarios"
+
+msgctxt "view:network.software.service:"
+msgid "Compute _URL"
+msgstr "Calcular _URL"
+
+msgctxt "view:network.software.service:"
+msgid "Service"
+msgstr "Servicio"
+
+msgctxt "view:network.software.service:"
+msgid "Services"
+msgstr "Servicios"
 
 msgctxt "view:network.software.type:"
 msgid "Software Type"
-msgstr "Tipo de programa"
+msgstr "Tipo de software"
 
 msgctxt "view:network.software:"
-msgid "Login Users"
-msgstr "Usuarios registrados"
+msgid "Login Services and Users"
+msgstr "Servicios y usuarios"
 
 msgctxt "view:network.software:"
 msgid "Notes"
-msgstr "Notas"
+msgstr "Observaciones"
 
 msgctxt "view:network.software:"
 msgid "Software"
-msgstr "Programa"
+msgstr "Software"
 
 msgctxt "view:network.software:"
 msgid "Softwares"
-msgstr "Programas"
+msgstr "Softwares"

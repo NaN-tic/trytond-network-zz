@@ -20,7 +20,7 @@ copyright notices and license terms. -->
     </record>
 
     <!-- Top Menu -->
-    <menuitem name="Network" id="menu_network" icon="tryton-network"/>
+    <menuitem name="Networks" id="menu_network" icon="tryton-network"/>
     <record model="ir.ui.menu-res.group" id="menu_network_group_network">
         <field name="menu" ref="menu_network"/>
         <field name="group" ref="group_network"/>
@@ -56,7 +56,7 @@ copyright notices and license terms. -->
         <field name="act_window" ref="act_network_network"/>
     </record>
 
-    <menuitem name="Network"
+    <menuitem name="Networks"
         parent="menu_network"
         action="act_network_network"
         id="menu_network_network"/>
@@ -132,7 +132,7 @@ copyright notices and license terms. -->
         <field name="act_window" ref="act_network_hardware"/>
     </record>
 
-    <menuitem name="Hardware"
+    <menuitem name="Hardwares"
         parent="menu_network"
         action="act_network_hardware"
         id="menu_network_hardware"/>
@@ -208,7 +208,7 @@ copyright notices and license terms. -->
         <field name="act_window" ref="act_network_software"/>
     </record>
 
-    <menuitem name="Software"
+    <menuitem name="Softwares"
         parent="menu_network"
         action="act_network_software"
         id="menu_network_software"/>
