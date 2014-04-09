@@ -38,6 +38,13 @@ class Network(ModelSQL, ModelView):
                     'You must set at least the domain or IP address.',
         })
 
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        return ['OR',
+            ('name',) + tuple(clause[1:]),
+            ('party',) + tuple(clause[1:]),
+            ]
+
     def check_domain_or_ip_address(self):
         if not self.domain and not self.ip_address:
             return False
@@ -67,6 +74,14 @@ class NetworkHardware(ModelSQL, ModelView):
     softwares = fields.One2Many('network.software', 'hardware', 'Softwares')
     party = fields.Function(fields.Many2One('party.party', 'Party'),
             'get_party', searcher='search_party')
+
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        return ['OR',
+            ('name',) + tuple(clause[1:]),
+            ('party',) + tuple(clause[1:]),
+            ]
 
     def get_party(self, name):
         return self.network.party.id
@@ -101,6 +116,14 @@ class NetworkSoftware(ModelSQL, ModelView):
         'Login Users')
     services = fields.One2Many('network.software.service', 'software',
         'Connection Services')
+
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        return ['OR',
+            ('name',) + tuple(clause[1:]),
+            ('party',) + tuple(clause[1:]),
+            ]
 
     def get_network(self, name):
         return self.hardware.network.id
