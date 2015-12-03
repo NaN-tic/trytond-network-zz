@@ -57,10 +57,6 @@ class NetworkHardwareType(ModelSQL, ModelView):
 
     name = fields.Char('Hardware Type Name', required=True, translate=True)
 
-    @staticmethod
-    def default_networkable():
-        return False
-
 
 class NetworkHardware(ModelSQL, ModelView):
     'Network Hardware'
